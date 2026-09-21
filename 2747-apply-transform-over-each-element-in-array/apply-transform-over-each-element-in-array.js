@@ -1,13 +1,8 @@
-/**
- * @param {number[]} arr
- * @param {Function} fn
- * @return {number[]}
- */
 var map = function (arr, fn) {
-    const returnedArray = [];
+    const returnedArray = new Array(arr.length);
 
     for (let i = 0; i < arr.length; i++) {
-        returnedArray.push(fn(arr[i], i));
+        returnedArray[i] = fn(arr[i], i);
     }
 
     return returnedArray;
